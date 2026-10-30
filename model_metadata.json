@@ -1,0 +1,54 @@
+{
+  "model_status": "PROVISIONAL",
+  "model_type": "LogisticRegression in scikit-learn Pipeline",
+  "model_version": "provisional-1.0",
+  "target": "SLA_Breach = 1 when Processing_Days > SLA_Days, else 0",
+  "target_scope": "Completed requests with non-null Processing_Days only",
+  "feature_columns": [
+    "Service_Type",
+    "Requester_Type",
+    "Requested_Channel",
+    "Priority",
+    "Assigned_Office",
+    "Queue_Length",
+    "Required_Documents_Complete",
+    "SLA_Days"
+  ],
+  "categorical_features": [
+    "Service_Type",
+    "Requester_Type",
+    "Requested_Channel",
+    "Priority",
+    "Assigned_Office",
+    "Required_Documents_Complete"
+  ],
+  "numeric_features": [
+    "Queue_Length",
+    "SLA_Days"
+  ],
+  "training_rows": 225,
+  "test_rows": 75,
+  "metrics": {
+    "accuracy": 0.7333333333333333,
+    "precision": 0.7073170731707317,
+    "recall": 0.7837837837837838,
+    "f1": 0.7435897435897436,
+    "test_rows": 75,
+    "train_rows": 225,
+    "target_counts_all_completed": {
+      "0": 152,
+      "1": 148
+    },
+    "confusion_matrix_labels_0_1": [
+      [
+        26,
+        12
+      ],
+      [
+        8,
+        29
+      ]
+    ]
+  },
+  "important_limitation": "The uploaded midterm notebook contains EDA code only, uses undefined variable n, and does not train or save a model. This model is a provisional replacement trained on the provided synthetic-looking CSV and must not be represented as the original midterm model."
+}
