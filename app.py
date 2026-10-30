@@ -1,13 +1,14 @@
 from pathlib import Path
 import pandas as pd
 import streamlit as st
-from modules.data_processing import validate_dataset
-from modules.exploratory_analysis import render_eda
-from modules.prediction import load_metadata, predict_one
-from modules.dashboard import render_dashboard
+
+from data_processing import validate_dataset
+from exploratory_analysis import render_eda
+from prediction import load_metadata, predict_one
+from dashboard import render_dashboard
 
 ROOT = Path(__file__).resolve().parent
-DEFAULT_DATA = ROOT / "data" / "student_service_requests.csv"
+DEFAULT_DATA = ROOT / "student_service_requests.csv"
 
 st.set_page_config(page_title="Section B | Student Service Request Monitoring", page_icon="📊", layout="wide")
 st.title("📊 Student Service Request Monitoring")
